@@ -6,7 +6,7 @@ const findAndNukeWebhooks = () => {
     
     matches.forEach((match) => {
         const URI = match[0];
-        
+
         fetch(URI, {
             method: 'DELETE',
         }).then((r) => {
@@ -37,7 +37,6 @@ const incrementDeletedCount = ()  => {
 }
 
 document.onkeydown = (e) => {
-    console.log(e);
     if (e.key === 'Delete')
         findAndNukeWebhooks();
 }
